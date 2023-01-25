@@ -65,16 +65,15 @@ figure {
 }
 
 .header-primary {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.bg-img {
     height: 600px;
     width: 1600px;
     margin-top: 18px;
-    background: var(--secondary-background-color), url("../images/header.jpg");
+    background: var(--secondary-background-color);
+    background-image: url("../images/header-img-overlay.png"),
+        url("../images/header.jpg");
     background-size: cover;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-title {
@@ -137,6 +136,28 @@ figure {
     margin-block: 0px;
 }
 
+.icon-Group-1 {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.icon-Group-2 {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.icon-Group-3 {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.icon-Group-4 {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
 .list-secondary {
     display: block;
     width: 1170px;
@@ -158,6 +179,7 @@ figure {
 .list-secondary-item {
     display: inline-flex;
     justify-items: space-between;
+    object-fit: contain;
 }
 
 .list-secondary-box {
@@ -385,6 +407,24 @@ figure {
     font-size: 16px;
     line-height: 1.875;
     color: var(--fourth-font-color);
+}
+
+.social-media-icons {
+    display: flex;
+    margin: 0px auto 30px;
+    justify-content: space-between;
+    width: 206px;
+    height: 44px;
+    cursor: pointer;
+}
+.icon-insta2 {
+    width: 44px;
+    height: 44px;
+}
+
+.icon-insta2:hover,
+.icon-insta2:focus {
+    fill: var(--fourthary-background-color);
 }
 
 .list-item-block {
