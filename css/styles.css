@@ -52,8 +52,9 @@ figure {
 .section {
     padding: 94px 0px;
 }
+
 .box {
-    display: block;
+    display: flex;
     width: 1600px;
     margin-left: 0px;
     margin-top: 0px;
@@ -64,10 +65,16 @@ figure {
 }
 
 .header-primary {
-    background: var(--secondary-background-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg-img {
     height: 600px;
     width: 1600px;
     margin-top: 18px;
+    background: var(--secondary-background-color), url("../images/header.jpg");
+    background-size: cover;
 }
 
 .header-title {
@@ -218,17 +225,11 @@ figure {
 
 .contact-links {
     display: flex;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     color: var(--fourth-font-color);
     letter-spacing: 0.02em;
-}
-
-.contact-links a:hover,
-.contact-links a:focus {
-    color: var(--second-font-color);
 }
 
 .nav-items {
@@ -285,6 +286,9 @@ figure {
 }
 
 .contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -293,14 +297,37 @@ figure {
 
 .email {
     margin: 32px 50px 32px auto;
-    width: 135px;
-    height: 16px;
+    width: 161px;
 }
 
 .number {
     margin: 32px 227px 32px 0px;
-    width: 110px;
+    width: 130px;
+}
+
+.contact-header:hover .icon-smartphone,
+.contact-header:focus .icon-smartphone {
+    stroke: var(--second-font-color);
+}
+
+.contact-links .contact-header:hover,
+.contact-links .contact-header:focus {
+    color: var(--second-font-color);
+}
+
+.icon-smartphone {
+    width: 10px;
     height: 16px;
+}
+
+.contact-header:hover .icon-envelope,
+.contact-header:focus .icon-envelope {
+    stroke: var(--second-font-color);
+}
+
+.icon-envelope {
+    width: 16px;
+    height: 12px;
 }
 
 .list-item {
