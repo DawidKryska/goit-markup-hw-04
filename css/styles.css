@@ -252,6 +252,7 @@ figure {
     line-height: 1.14;
     color: var(--fourth-font-color);
     letter-spacing: 0.02em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .nav-items {
@@ -301,6 +302,8 @@ figure {
 .buttons .list-button:active {
     color: var(--primary-background-color);
     background: var(--second-font-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .pointer button {
@@ -327,11 +330,6 @@ figure {
     width: 130px;
 }
 
-.contact-header:hover .icon-smartphone,
-.contact-header:focus .icon-smartphone {
-    stroke: var(--second-font-color);
-}
-
 .contact-links .contact-header:hover,
 .contact-links .contact-header:focus {
     color: var(--second-font-color);
@@ -340,16 +338,23 @@ figure {
 .icon-smartphone {
     width: 10px;
     height: 16px;
+    fill: var(--fourth-font-color);
 }
 
-.contact-header:hover .icon-envelope,
-.contact-header:focus .icon-envelope {
-    stroke: var(--second-font-color);
+.contact-header:hover .icon-smartphone,
+.contact-header:focus .icon-smartphone {
+    fill: var(--second-font-color);
 }
 
 .icon-envelope {
     width: 16px;
     height: 12px;
+    fill: var(--fourth-font-color);
+}
+
+.contact-header:hover .icon-envelope,
+.contact-header:focus .icon-envelope {
+    fill: var(--second-font-color);
 }
 
 .list-item {
@@ -380,6 +385,11 @@ figure {
     flex-direction: column;
     width: 370px;
     border: 1px solid #eeeeee;
+}
+.container-bg:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 .card-bg {
@@ -417,14 +427,19 @@ figure {
     height: 44px;
     cursor: pointer;
 }
-.icon-insta2 {
+
+.icon {
+    fill: #afb1b8;
+    padding: 12px 0px 12px;
     width: 44px;
     height: 44px;
+    border-radius: 50%;
 }
 
-.icon-insta2:hover,
-.icon-insta2:focus {
-    fill: var(--fourthary-background-color);
+.icon:hover,
+.icon:focus {
+    fill: #ffffff;
+    background-color: #2196f3;
 }
 
 .list-item-block {
@@ -449,7 +464,50 @@ figure {
     color: var(--fourth-font-color);
 }
 
+.our-clients {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1600px;
+    padding: 84px 215px 94px;
+}
+.our-clients-title {
+    width: 1170px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-block: 0px;
+    color: #212121;
+    padding-bottom: 50px;
+}
+
+.our-clients-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon2 {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    padding: 22px 0px 22px;
+    cursor: pointer;
+}
+
+.icon2:hover,
+.icon2:focus {
+    fill: #2196f3;
+    background-color: #ffffff;
+    border: 1px solid #2196f3;
+}
+
 .footer {
+    display: flex;
+
     width: 1600px;
     height: 252px;
     background: var(--secondary-background-color);
@@ -462,13 +520,13 @@ figure {
 .logo-footer {
     display: block;
     width: 145px;
-    margin: 60px auto auto 15px;
+    margin: 60px auto 20px 15px;
 }
 
 .contact-links-footer a {
     display: flex;
     width: 231px;
-    margin: 9px auto 9px 15px;
+    margin: 0px auto 9px 15px;
     font-size: 14px;
     line-height: 1.71;
     color: var(--primary-background-color);
@@ -486,8 +544,49 @@ figure {
 
 .address-text {
     width: 246px;
-    margin: 20px auto auto 15px;
+    margin: 0px auto 9px 15px;
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
     color: var(--primary-background-color);
+}
+
+.social-icons-footer {
+    margin: 72px auto auto 70px;
+    width: 206px;
+    height: 80px;
+    justify-content: space-between;
+}
+
+.icon3 {
+    fill: #ffffff;
+    padding: 12px 0px 12px;
+    margin-top: 20px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon3:hover,
+.icon3:focus {
+    fill: #ffffff;
+    background-color: #2196f3;
+}
+
+.social-icons-footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.icon3-container {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+    cursor: pointer;
 }
